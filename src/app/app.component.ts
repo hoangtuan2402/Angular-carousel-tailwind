@@ -9,6 +9,7 @@ import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
 export class AppComponent {
   isDark: boolean = true;
   link = '';
+  currentPosition: number =0;
 
   changeTheme() {
     console.log('Change Theme processing');
@@ -36,15 +37,15 @@ export class AppComponent {
     },
     {
       id: 3,
-      src: 'https://source.unsplash.com/m7K4KzL5aQ8',
+      src: 'https://source.unsplash.com/Z8dtTatMVMw',
       alt: 'Side 3',
       title: 'Side 3',
     },
     {
-      id: 1,
-      src: 'https://source.unsplash.com/Z8dtTatMVMw',
-      alt: 'Side 1',
-      title: 'Side 1',
+      id: 4,
+      src: 'https://source.unsplash.com/m7K4KzL5aQ8',
+      alt: 'Side 4',
+      title: 'Side 4',
     },
   ];
   customOptions: OwlOptions = {
@@ -84,18 +85,25 @@ export class AppComponent {
 
   getPassedData(data: SlidesOutputData) {
     this.activeSlides = data;
-    let startPosi : number= data.startPosition!;
-    this.link = this.dynamicSlides[startPosi].src;
-    // console.log(this.activeSlides);
+    this.currentPosition = data.startPosition!;
+    this.link = this.dynamicSlides[this.currentPosition].src;
+
+    // document.getElementById('imgSlide');
+    // console.log(document.getElementById('imgSlide'));
   }
 
   getData(data: SlidesOutputData) {
     // console.log(data);
-    let startPosi : number= data.startPosition!;
-   
-    setTimeout(()=> {
-      this.link = this.dynamicSlides[startPosi].src;
-  }, 0);
+    this.currentPosition = data.startPosition!;
+
+    setTimeout(() => {
+      this.link = this.dynamicSlides[this.currentPosition].src;
+      this.activeSlides = data;
+    }, 0);
+  }
+
+  trackImg(index: any, slide: any){
+    // console.log(slide);
     
   }
 }
