@@ -67,11 +67,10 @@ export class AppComponent {
       },
       768: {
         items: 3,
-        nav: true,
+        nav: false,
       },
       1000: {
         items: 3,
-        nav: false,
       },
     },
     nav: false,
@@ -93,7 +92,10 @@ export class AppComponent {
   getData(data: SlidesOutputData) {
     // console.log(data);
     let startPosi : number= data.startPosition!;
-    this.link = this.dynamicSlides[startPosi].src;
+   
+    setTimeout(()=> {
+      this.link = this.dynamicSlides[startPosi].src;
+  }, 0);
     
   }
 }

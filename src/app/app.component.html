@@ -1,4 +1,4 @@
-<div class="relative w-screen  bg-black items-center justify-center">
+<!-- <div class="relative w-screen  bg-black items-center justify-center">
     <div class="absolute w-screen h-screen ">
         <img src={{link}} lt="" class=" w-screen h-1/2  object-cover blur" />
     </div>
@@ -7,6 +7,27 @@
             <ng-container *ngFor="let slide of dynamicSlides">
                 <ng-template carouselSlide="carouselSlide">
                     <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title" class="rounded-lg object-cover" /></ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+</div> -->
+
+
+<div class="container">
+    <h1 class="text-center"><b>Responsive Owl Carousel</b></h1>
+    <div class="slider">
+        <owl-carousel-o [options]="customOptions" (initialized)="getData($event)" (translated)="getPassedData($event)">
+            <ng-container *ngFor="let slide of dynamicSlides">
+                <ng-template carouselSlide="carouselSlide">
+                    <div class="slider-card">
+                        <div class="d-flex justify-content-center align-items-center mb-4">
+                            <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="">
+                        </div>
+                        <h5 class="mb-0 text-center"><b>HTML CSS3 Tutorials</b></h5>
+                        <p class="text-center p-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam temporibus quidem magni qui doloribus quasi natus inventore nisi velit minima.</p>
+                    </div>
+
+                </ng-template>
             </ng-container>
         </owl-carousel-o>
     </div>
