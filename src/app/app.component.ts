@@ -75,7 +75,6 @@ export class AppComponent {
       },
     },
     nav: false,
-    margin: 20,
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
@@ -87,9 +86,6 @@ export class AppComponent {
     this.activeSlides = data;
     this.currentPosition = data.startPosition!;
     this.link = this.dynamicSlides[this.currentPosition].src;
-
-    // document.getElementById('imgSlide');
-    // console.log(document.getElementById('imgSlide'));
   }
 
   getData(data: SlidesOutputData) {
@@ -102,8 +98,5 @@ export class AppComponent {
     }, 0);
   }
 
-  trackImg(index: any, slide: any){
-    // console.log(slide);
-    
-  }
+
 }

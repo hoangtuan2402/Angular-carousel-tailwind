@@ -7,10 +7,10 @@
             <ng-container *ngFor="let slide of dynamicSlides; let i = index">
                 <ng-template carouselSlide=" carouselSlide ">
                     <div *ngIf="i == currentPosition; else noScale" class="center">
-                        <img [src]="slide.src" id="imgSlide " [alt]="slide.alt" [title]="slide.title" class="rounded-lg object-cover shadow-2xl " />
+                        <img [src]="slide.src" id="imgSlide " [alt]="slide.alt" [title]="slide.title" class="rounded-lg object-cover shadow-2xl transition duration-700 ease-in  scale-100" />
                     </div>
                     <ng-template #noScale>
-                        <img [src]="slide.src" id="imgSlide " [alt]="slide.alt" [title]="slide.title" class="rounded-lg object-cover shadow-2xl  opacity-50  translate-x-4  slider-card-scale" />
+                        <img [src]="slide.src" id="imgSlide " [alt]="slide.alt" [title]="slide.title" class="rounded-lg object-cover shadow-2xl  opacity-50   scale-75 " />
                     </ng-template>
                 </ng-template>
             </ng-container>
