@@ -1,0 +1,20 @@
+<div class="relative max-w-screen bg-black items-center justify-center">
+    <div class="absolute w-screen h-screen ">
+        <img src={{link}} alt="" class=" w-screen h-1/2  object-cover blur" />
+    </div>
+    <div class="absolute w-screen h-1/5">
+        <owl-carousel-o [options]="customOptions" (initialized)="getData($event)" (changed)="getPassedData($event)">
+            <ng-container *ngFor="let slide of dynamicSlides; let i = index">
+                <ng-template carouselSlide=" carouselSlide ">
+                    <div *ngIf="i == currentPosition; else scaleCard" class="center">
+                        <img [src]="slide.src" id="imgSlide " [alt]="slide.alt" [title]="slide.title" class=" rounded-lg object-cover shadow-2xl " />
+
+                    </div>
+                    <ng-template #scaleCard>
+                        <img [src]="slide.src" id="imgSlide " [alt]="slide.alt" [title]="slide.title" class="rounded-lg object-cover shadow-2xl  opacity-50  translate-x-4  slider-card-scale" />
+                    </ng-template>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+</div>
