@@ -3,7 +3,7 @@
         <img src={{link}} alt="" class=" w-screen h-1/2  object-cover blur" />
     </div>
     <div class="absolute w-screen h-1/5">
-        <owl-carousel-o [options]="customOptions" (initialized)="getData($event)" (translated)="getPassedData($event)">
+        <owl-carousel-o [options]="customOptions" (initialized)="getData($event)" (changed)="getPassedData($event)">
             <ng-container *ngFor="let slide of dynamicSlides; let i = index">
                 <ng-template carouselSlide=" carouselSlide ">
                     <div *ngIf="i == currentPosition; else noScale" class="center">
