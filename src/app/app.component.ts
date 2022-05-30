@@ -84,12 +84,12 @@ export class AppComponent {
   activeSlides?: SlidesOutputData;
 
   getPassedData(data: SlidesOutputData) {
-    this.activeSlides = data;
-    this.currentPosition = data.startPosition!;
-    this.link = this.dynamicSlides[this.currentPosition].src;
+    setTimeout(() => {
+      this.activeSlides = data;
+      this.currentPosition = data.startPosition!;
+      this.link = this.dynamicSlides[this.currentPosition].src;
 
-    // document.getElementById('imgSlide');
-    // console.log(document.getElementById('imgSlide'));
+    }, 0);
   }
 
   getData(data: SlidesOutputData) {
@@ -104,6 +104,6 @@ export class AppComponent {
 
   trackImg(index: any, slide: any){
     // console.log(slide);
-    
+
   }
 }
