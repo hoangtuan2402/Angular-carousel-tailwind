@@ -7,12 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CaroselSlideComponent } from './carosel-slide/carosel-slide.component';
 import { HeaderComponent } from './header/header.component';
+import { Body1Component } from './body1/body1.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CaroselSlideComponent,
-    HeaderComponent
+    HeaderComponent,
+    Body1Component,
+    NavComponent
   ],
   imports: [
     BrowserModule,

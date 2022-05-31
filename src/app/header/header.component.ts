@@ -11,5 +11,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  show: boolean = true
 
+  showMenu(){
+    this.show =! this.show
+
+  }
 }
