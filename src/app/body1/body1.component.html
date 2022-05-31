@@ -1,0 +1,77 @@
+<div class="relative w-full h-full pb-10">
+    <div class="hidden md:block">
+        <img class="absolute bg-cover bg-center w-full h-full inset-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Hero%2008.png" alt="" />
+    </div>
+    <nav class="lg:hidden relative z-50">
+        <div class="flex py-2 justify-between items-center px-4">
+            <div>
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg1.svg" alt="logo" />
+            </div>
+            <div class="visible flex items-center">
+                <button id="open" (click)="menuHandler(true)" class="focus:outline-none focus:ring-2 focus:ring-black">
+                          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg2.svg" alt="menu" />
+                      </button>
+                <ul id="list" class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-24">
+                    <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                        <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                            <span class="font-bold">Home</span>
+                        </a>
+                    </li>
+                    <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+                        <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                            <span class="font-bold">About Us</span>
+                        </a>
+                    </li>
+                    <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                        <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                            <span class="font-bold">Pricing</span>
+                        </a>
+                    </li>
+                    <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+                        <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                            <span class="font-bold">Resources</span>
+                        </a>
+                    </li>
+                    <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+                        <a href="javascript: void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
+                            <span class="font-bold">Sign In</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="xl:hidden">
+                    <button id="close" class="hidden close-m-menu focus:ring-2 focus:ring-black focus:outline-none" (click)="menuHandler(false)">
+                              <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg3.svg" alt="close" />
+                          </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="f-f-l relative z-10">
+        <div class="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center py-11">
+            <div>
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg4.svg" alt="logo" />
+            </div>
+            <div class="flex items-center text-white text-base font-medium">
+                <ul class="flex items-center pr-3 xl:pr-12">
+                    <li class="cursor-pointer hover:text-gray-300 ease-in">
+                        <a href="javascript:void(0)" class="focus:outline-none focus:ring-2 focus:ring-white">Home</a>
+                    </li>
+                    <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in">
+                        <a href="javascript:void(0)" class="focus:outline-none focus:ring-2 focus:ring-white">About Us</a>
+                    </li>
+                    <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in">
+                        <a href="javascript:void(0)" class="focus:outline-none focus:ring-2 focus:ring-white">Pricing</a>
+                    </li>
+                    <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in">
+                        <a href="javascript:void(0)" class="focus:outline-none focus:ring-2 focus:ring-white">Resources</a>
+                    </li>
+                </ul>
+                <button class="px-6 py-3 bg-indigo-400 hover:bg-indigo-500 text-white text-base font-medium rounded-lg flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">
+                          Sign In
+                          <img class="ml-4" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg5.svg" alt="arrow" />
+                      </button>
+            </div>
+        </div>
+    </nav>
+
+</div>
