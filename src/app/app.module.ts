@@ -9,6 +9,7 @@ import { CaroselSlideComponent } from './carosel-slide/carosel-slide.component';
 import { HeaderComponent } from './header/header.component';
 import { Body1Component } from './body1/body1.component';
 import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavComponent } from './nav/nav.component';
     CaroselSlideComponent,
     HeaderComponent,
     Body1Component,
-    NavComponent
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
