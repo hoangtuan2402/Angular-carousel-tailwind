@@ -7,11 +7,11 @@ import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
   styleUrls: ['./carosel-slide.component.css']
 })
 export class CaroselSlideComponent implements OnInit {
- 
+
   constructor() { }
 
   ngOnInit(): void {
-   
+
   }
   isDark: boolean = true;
   link = '';
@@ -72,7 +72,7 @@ export class CaroselSlideComponent implements OnInit {
       480: {
         items: 1,
       },
-      768: {
+      750: {
         items: 3,
         nav: false,
       },
