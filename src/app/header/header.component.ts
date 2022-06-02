@@ -17,4 +17,15 @@ export class HeaderComponent implements OnInit {
     this.show =! this.show
 
   }
+  isDark: boolean = true;
+  changeTheme() {
+    console.log("Change Theme processing");
+    if(this.isDark){
+      document.documentElement.classList.remove('dark');
+      this.isDark = false;
+    }else{
+      document.documentElement.classList.add('dark');
+      this.isDark = true;
+    }
+  }
 }
