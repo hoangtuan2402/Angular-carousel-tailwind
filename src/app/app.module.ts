@@ -8,7 +8,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CaroselSlideComponent } from './carosel-slide/carosel-slide.component';
 import { HeaderComponent } from './header/header.component';
 import { Body1Component } from './body1/body1.component';
-import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { FooterComponent } from './footer/footer.component';
     CaroselSlideComponent,
     HeaderComponent,
     Body1Component,
-    NavComponent,
     FooterComponent
   ],
   imports: [
