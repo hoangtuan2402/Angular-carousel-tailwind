@@ -11,6 +11,7 @@ import { Body1Component } from './body1/body1.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailComponent } from './detail/detail.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ListChapterComponent } from './list-chapter/list-chapter.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     Body1Component,
     FooterComponent,
     DetailComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    ListChapterComponent
   ],
   imports: [
     BrowserModule,
