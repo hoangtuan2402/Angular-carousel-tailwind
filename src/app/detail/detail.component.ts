@@ -11,5 +11,9 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  dropdown(){
+    console.log(document.getElementById("dropdown"));
+    document.getElementById("dropdown")?.classList.remove("hidden")
+  }
 
 }
