@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DetailComponent } from './detail/detail.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ListChapterComponent } from './list-chapter/list-chapter.component';
+import { ReadingPageComponent } from './reading-page/reading-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ListChapterComponent } from './list-chapter/list-chapter.component';
     FooterComponent,
     DetailComponent,
     ReviewsComponent,
-    ListChapterComponent
+    ListChapterComponent,
+    ReadingPageComponent
   ],
   imports: [
     BrowserModule,
