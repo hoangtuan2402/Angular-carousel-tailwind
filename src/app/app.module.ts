@@ -13,6 +13,8 @@ import { DetailComponent } from './detail/detail.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ListChapterComponent } from './list-chapter/list-chapter.component';
 import { ReadingPageComponent } from './reading-page/reading-page.component';
+import { CommentFormComponent } from './comment-form/comment-form.component';
+import { NavbarReadingComponent } from './navbar-reading/navbar-reading.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ReadingPageComponent } from './reading-page/reading-page.component';
     DetailComponent,
     ReviewsComponent,
     ListChapterComponent,
-    ReadingPageComponent
+    ReadingPageComponent,
+    CommentFormComponent,
+    NavbarReadingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,25 +1,6 @@
 <div class="flex flex-col items-center dark:bg-gray-800">
-    <div class="flex justify-center items-center fixed">
-        <div class="mt-14 mr-5">
-            <button type="button" class="h-10 px-6 font-semibold rounded-xl  border-2  text-slate-400 hover:bg-slate-300 bg-slate-200">
-               Pre
-              </button>
-        </div>
-        <div class="mb-3 xl:w-96 mt-20">
-            <select class="form-select form-select-lg mb-3 appearance-none block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded-xl transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                aria-label=".form-select-lg example">
-        <option selected value="0" >Chapter</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-        </div>
-        <div class="mt-14 ml-5">
-            <button type="button" class="h-10 px-6 font-semibold rounded-xl  border-2  text-slate-400 hover:bg-slate-300 bg-slate-200">
-                Next
-               </button>
-        </div>
-    </div>
-
-    <img [src]="transform()" alt="">
+    <app-navbar-reading> </app-navbar-reading>
+    <img [src]="transform()" alt="" />
+    <app-navbar-reading> </app-navbar-reading>
 </div>
+<app-comment-form> </app-comment-form>
