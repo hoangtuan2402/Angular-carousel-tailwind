@@ -32,7 +32,7 @@ export class ListChapterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.listChapter[1000];
+   
   }
 
 }

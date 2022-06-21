@@ -8,6 +8,17 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ReadingPageComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
+  fileToUpload: File | null = null;
+
+
+  handleFileInput(files: FileList){
+    if (!files) return;
+    this.fileToUpload = files.item(0);
+  }
+
+
+
+
 
   ngOnInit(): void {}
   base64Image =

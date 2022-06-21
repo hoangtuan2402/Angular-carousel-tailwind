@@ -15,6 +15,11 @@ import { ListChapterComponent } from './list-chapter/list-chapter.component';
 import { ReadingPageComponent } from './reading-page/reading-page.component';
 import { CommentFormComponent } from './comment-form/comment-form.component';
 import { NavbarReadingComponent } from './navbar-reading/navbar-reading.component';
+import { ComicsComponent } from './publish/comics/comics.component';
+import { NovelsComponent } from './publish/novels/novels.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { StepsComponent } from './steps/steps.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +33,19 @@ import { NavbarReadingComponent } from './navbar-reading/navbar-reading.componen
     ListChapterComponent,
     ReadingPageComponent,
     CommentFormComponent,
-    NavbarReadingComponent
+    NavbarReadingComponent,
+    ComicsComponent,
+    NovelsComponent,
+    StepsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

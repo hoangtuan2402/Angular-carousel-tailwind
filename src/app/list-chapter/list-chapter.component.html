@@ -6,12 +6,12 @@
             </h3>
         </div>
         <div class="lg:h-96 h-96 overflow-auto scroll-smooth  w-full">
-            <ul class="px-4 py-5 sm:px-6 border-b w-full flex flex-col divide divide-y  " *ngFor="let item of listChapter">
+            <ul class="px-4 py-5 sm:px-6 border-b w-full flex flex-col divide divide-y  " *ngFor="let item of listChapter; index as i">
                 <li class="flex flex-row">
                     <div class="select-none cursor-pointer flex flex-1 items-center p-4">
                         <div class="flex-1 pl-1 mr-16">
                             <div class="font-medium dark:text-white">
-                                item.name
+                                Chapter {{i}}
                             </div>
                             <div class="text-gray-600 dark:text-gray-200 text-sm">
                                 Developer
