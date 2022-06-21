@@ -1,65 +1,73 @@
 <form>
     <div class="flex">
-        <div class=" w-screen md:w-3/4">
+        <div class="w-screen lg:w-3/4 ">
             <div class="flex-col">
                 <div class="flex text-xl mt-5">
-                    <p class="text-red-600 mx-2">*</p>Comic name
+                    <p class="text-red-600 mx-2 lg:ml-64">*</p>
+                    Comic name
                 </div>
-                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 mt-2 text-sm  rounded-xl block w-11/12  mx-5 p-2.5 dark:bg-gray-700 " placeholder="name" required>
+                <input type="text" id="first_name" class="bg-gray-50 lg:ml-64 border border-gray-300 text-gray-900 mt-2 text-sm rounded-xl block w-11/12 lg:w-1/2 mx-5 p-2.5 dark:bg-gray-700" placeholder="name" required />
 
-                <div class="flex text-xl mt-5">
-                    <p class="text-red-600 mx-2">*</p>Author
+                <div class="flex text-xl mt-5 lg:ml-64">
+                    <p class="text-red-600 mx-2">*</p>
+                    Author
                 </div>
-                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 mt-2 text-sm  rounded-xl block w-11/12  mx-5  p-2.5 dark:bg-gray-700 " placeholder="name" required>
+                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 lg:ml-64 text-gray-900 mt-2 text-sm rounded-xl block w-11/12 lg:w-1/2 mx-5 p-2.5 dark:bg-gray-700" placeholder="name" required />
                 <!-- Commic Category -->
-                <div class="flex text-xl mt-5">
-                    <p class="text-red-600 mx-2">*</p>Comic Category
+                <div class="flex text-xl mt-5 lg:ml-64">
+                    <p class="text-red-600 mx-2">*</p>
+                    Comic Category
                 </div>
-                <ng-select [items]="cars" bindLabel="name" placeholder="Select Category" appendTo="body" [multiple]="true" [(ngModel)]="selected" name="category" class="  text-sm   block w-11/12  ml-4  p-2.5 ">
+
+
+                <ng-select [items]="cars" bindLabel="name" placeholder="Select Category" [multiple]="true" [(ngModel)]="selected" name="category" class="text-sm block  w-11/12 lg:w-1/2 ml-4 p-2.5 lg:ml-64">
                 </ng-select>
 
-                <div class="flex text-xl mt-5">
-                    <p class="text-red-600 mx-2">*</p>Comic tags
+                <div class="flex text-xl mt-5 lg:ml-64">
+                    <p class="text-red-600 mx-2">*</p>
+                    Comic tags
                 </div>
-                <ng-select [items]="tags" bindLabel="name" placeholder="Select Tags" [multiple]="true" [(ngModel)]="selectedTags" name="tags" class="  text-sm   block w-11/12  ml-4  p-2.5 ">
+                <ng-select [items]="tags" bindLabel="name" placeholder="Select Tags" [multiple]="true" [(ngModel)]="selectedTags" name="tags" class="text-sm block  w-11/12 lg:w-1/2 ml-4 p-2.5 lg:ml-64">
                 </ng-select>
 
-
-                <div class="flex text-xl mt-5">
-                    <p class="text-red-600 mx-2">*</p>Introduction
+                <div class="flex text-xl mt-5 lg:ml-64">
+                    <p class="text-red-600 mx-2">*</p>
+                    Introduction
                 </div>
-                <textarea id="message" rows="4" class="block p-2.5 w-11/12 mx-5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                <textarea id="message" rows="4" class="block p-2.5  w-11/12 lg:w-1/2 lg:ml-64 mx-5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Leave an introduction..."></textarea>
                 <!-- Ratting -->
 
-                <div class="flex text-xl mt-5">
-                    <p class="text-red-600 mx-2">*</p>Ratting
+                <div class="flex text-xl mt-5 lg:ml-64">
+                    <p class="text-red-600 mx-2">*</p>
+                    Ratting
                 </div>
-                <div>
+                <div class="lg:ml-64 mt-4">
                     <div class="form-check text-xl flex">
                         <div class="flex items-center h-5">
                             <input class="form-check-input appearance-none rounded-full h-5 w-5 mx-5 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                                type="radio" name="flexRadioDefault" id="flexRadioDefault1" aria-describedby="flexRadioDefault1-text">
+                                type="radio" name="flexRadioDefault" id="flexRadioDefault1" aria-describedby="flexRadioDefault1-text" />
                         </div>
                         <div class="ml-2 text-xl">
                             <label for="flexRadioDefault1" class="font-medium text-gray-900 dark:text-gray-300">Free shipping via Flowbite</label>
-                            <p id="flexRadioDefault1-text" class="text-sm font-normal text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus lacinia, posuere nibh a, pellentesque leo. In condimentum erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus lacinia,
-                                posuere nibh a, pellentesque leo. In condimentum erat.</p>
+                            <p id="flexRadioDefault1-text" class="text-sm font-normal text-gray-500 dark:text-gray-300">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus lacinia, posuere nibh a, pellentesque leo. In condimentum erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus lacinia, posuere nibh a, pellentesque
+                                leo. In condimentum erat.
+                            </p>
                         </div>
                     </div>
                     <div class="form-check text-xl">
                         <input class="form-check-input appearance-none rounded-full h-5 w-5 mx-5 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                            type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                        <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
-                        Lorem
-                      </label>
+                            type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                        <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">Lorem</label>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- begin Quote -->
-        <div class=" hidden md:flex md:w-1/4 justify-center items-center ">
-            <div class="max-w-4xl p-4 text-gray-800 bg-white rounded-lg shadow relative">
+        <div class="hidden lg:flex lg:w-1/4 mt-4 ">
+            <div class="max-w-4xl p-4 text-gray-800 bg-white rounded-lg shadow relative lg:h-1/4 ">
                 <div class="mb-2">
                     <div class="h-3 text-3xl text-left text-gray-600">“</div>
                     <p class="px-4 text-sm text-center text-gray-600">
@@ -69,19 +77,20 @@
                 </div>
                 <img src="assets/img/tips.png" alt="tips" class="absolute -top-10 right-0">
             </div>
+
+
         </div>
         <!-- end Quote -->
     </div>
-    <div class="flex items-center justify-center mx-3 my-3  ">
-        <div class="md:w-2/3"></div>
-        <div class="md:w-1/3">
-            <button class="shadow bg-slate-400 hover:bg-slate-800 focus:shadow-outline focus:outline-none text-white  text-sm  py-1 px-5 rounded-full" type="button">
-            Cancel
-          </button>
-            <button class="mx-4 shadow bg-orange-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white text-sm  py-1 px-5 rounded-full" type="button">
-          Next
-        </button>
-
+    <div class="flex items-center justify-center mx-3 my-3">
+        <div class="lg:w-2/3"></div>
+        <div class="lg:w-1/3">
+            <button class="shadow bg-slate-400 hover:bg-slate-800 focus:shadow-outline focus:outline-none text-white text-sm py-1 px-5 rounded-full" type="button">
+        Cancel
+      </button>
+            <button class="mx-4 shadow bg-orange-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white text-sm py-1 px-5 rounded-full" type="button">
+        Next
+      </button>
         </div>
     </div>
 </form>
