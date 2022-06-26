@@ -45,4 +45,7 @@ export class UploadCoverComponent implements OnInit {
   submit() {
     console.log(this.myForm.value);
   }
+  removeImage(){
+    this.imageSrc ="";
+  }
 }
