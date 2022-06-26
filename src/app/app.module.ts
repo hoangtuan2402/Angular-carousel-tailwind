@@ -20,6 +20,8 @@ import { NovelsComponent } from './publish/novels/novels.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { StepsComponent } from './steps/steps.component';
+import { UploadCoverComponent } from './publish/upload-cover/upload-cover.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { StepsComponent } from './steps/steps.component';
     NavbarReadingComponent,
     ComicsComponent,
     NovelsComponent,
-    StepsComponent
+    StepsComponent,
+    UploadCoverComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { StepsComponent } from './steps/steps.component';
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    NgSelectModule
+    NgSelectModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
