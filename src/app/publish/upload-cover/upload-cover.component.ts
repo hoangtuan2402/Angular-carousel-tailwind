@@ -31,7 +31,6 @@ export class UploadCoverComponent implements OnInit {
       reader.readAsDataURL(file);
 
       reader.onload = () => {
-        console.log(reader.result as string);
         
         this.imageSrc = reader.result as string;
 
