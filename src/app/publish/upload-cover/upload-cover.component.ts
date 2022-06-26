@@ -11,7 +11,7 @@ export class UploadCoverComponent implements OnInit {
   imageSrc: string = '';
 
   myForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    coverWithTitle: new FormControl('', [Validators.required, Validators.minLength(3)]),
     file: new FormControl('', [Validators.required]),
     fileSource: new FormControl('', [Validators.required]),
   });
@@ -19,9 +19,7 @@ export class UploadCoverComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  get formProperties() {
-    console.log(this.myForm.controls);
-    
+  get f() {
     return this.myForm.controls;
   }
 
@@ -33,6 +31,8 @@ export class UploadCoverComponent implements OnInit {
       reader.readAsDataURL(file);
 
       reader.onload = () => {
+        console.log(reader.result as string);
+        
         this.imageSrc = reader.result as string;
 
         this.myForm.patchValue({
@@ -43,7 +43,7 @@ export class UploadCoverComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.myForm.value);
+    console.log("Submit Form");
   }
   removeImage(){
     this.imageSrc ="";

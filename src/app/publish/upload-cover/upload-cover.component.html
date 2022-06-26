@@ -1,60 +1,60 @@
 <form [formGroup]="myForm" (ngSubmit)="submit()">
     <div class="form-group">
         <div class="flex-col justify-center items-center w-full lg:w-1/4 lg:pl-32">
-            <label for="file" [ngClass]="imageSrc ? 'hidden' : 'flex'" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-        <div class="flex flex-col justify-center items-center pt-5 pb-6">
-          <svg
-            class="mb-3 w-10 h-10 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-            ></path>
-          </svg>
-          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-            <span class="font-semibold">Click to upload</span> or drag and drop
-          </p>
-          <p class="text-xs text-gray-500 dark:text-gray-400">
-            SVG, PNG, JPG or GIF (MAX. 800x400px)
-          </p>
-        </div>
-        <input
-          formControlName="file"
-          id="file"
-          type="file"
-          class="form-control hidden"
-          (change)="onFileChange($event)"
-        />
-      </label>
+            <div class="flex p-2">
+                <p class="pr-2 text-red-600">*</p>
+                Cover with title
+            </div>
+            <label for="coverWithTitle" [ngClass]="imageSrc ? 'hidden' : 'flex'" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+      <div class="flex flex-col justify-center items-center pt-5 pb-6">
+        <svg
+          class="mb-3 w-10 h-10 text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+          ></path>
+        </svg>
+        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+          <span class="font-semibold">Click to upload</span> or drag and drop
+        </p>
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          SVG, PNG, JPG or GIF (MAX. 800x400px)
+        </p>
+      </div>
+      <input
+        formControlName="coverWithTitle"
+        id="coverWithTitle"
+        type="file"
+        class="form-control hidden"
+        (change)="onFileChange($event)"
+        (click)="$any($event.target).value= null"
+      />
+    </label>
 
             <div class="relative w-48 h-64" *ngIf="imageSrc">
-                <img [src]="imageSrc" class=" w-48 h-64 rounded-2xl" />
+                <img [src]="imageSrc" class="w-48 h-64 rounded-2xl" />
                 <div class="absolute top-0 right-0 cursor-pointer" (click)="removeImage()">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20">
-                     <path
-                          fill-rule="evenodd"
-                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                     />
-          </svg>
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          />
+        </svg>
                 </div>
-            </div>
-        </div>
-        <div *ngIf="formProperties['file'].touched && formProperties['file'].invalid">
-            <div *ngIf="
-          formProperties['file'].errors &&
-          formProperties['file'].errors['required']
-        ">
-                File is required.
             </div>
         </div>
     </div>
 
-    <button class="" [disabled]="myForm.invalid" type="submit">Submit</button>
+    <!-- <button class="" [disabled]="myForm.invalid" type="submit">Submit</button> -->
+    <button type="submit" class="mx-4 shadow bg-orange-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white text-sm py-1 px-5 rounded-full">
+  Save
+</button>
 </form>
