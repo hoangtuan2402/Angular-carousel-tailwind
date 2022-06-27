@@ -7,7 +7,7 @@
                         <p class="pr-2 text-red-600">*</p>
                         Cover with title
                     </div>
-                    <label for="fileCoverWithTitle" [ngClass]="imageSrc ? 'hidden' : 'flex'" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800  hover:bg-gray-100 ">
+                    <label for="fileCoverWithTitle" [ngClass]="imageCoverWithTile ? 'hidden' : 'flex'" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800  hover:bg-gray-100 ">
     <div class="flex flex-col justify-center items-center pt-5 pb-6">
       <svg
         class="mb-3 w-10 h-10 text-gray-400"
@@ -35,13 +35,13 @@
       id="fileCoverWithTitle"
       type="file"
       class="form-control hidden"
-      (change)="onFileChange($event)"
+      (change)="onFileChange($event,'fileCoverWithTitle')"
       (click)="$any($event.target).value= null"
     />
   </label>
 
-                    <div class="relative w-48 h-64" *ngIf="imageSrc">
-                        <img [src]="imageSrc" class="w-48 h-64 rounded-2xl" />
+                    <div class="relative w-48 h-64" *ngIf="imageCoverWithTile">
+                        <img [src]="imageCoverWithTile" class="w-48 h-64 rounded-2xl" />
                         <div class="absolute top-0 right-0 cursor-pointer" (click)="removeImage()">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20">
         <path
@@ -61,9 +61,72 @@
             </div>
         </div>
 
+
+        <div class="form-group">
+            <div class="flex w-screen">
+                <div class="flex-col justify-center items-center w-full lg:w-1/4 lg:pl-32">
+                    <div class="flex p-2 dark:text-white">
+                        <p class="pr-2 text-red-600">*</p>
+                        Background Image
+                    </div>
+                    <label for="fileBackgroud" [ngClass]="imageBackground ? 'hidden' : 'flex'" class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800  hover:bg-gray-100 ">
+  <div class="flex flex-col justify-center items-center pt-5 pb-6">
+    <svg
+      class="mb-3 w-10 h-10 text-gray-400"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+      ></path>
+    </svg>
+    <p class="mb-2 text-sm text-gray-500 ">
+      <span class="font-semibold">Click to upload</span> or drag and drop
+    </p>
+    <p class="text-xs text-gray-500 ">
+      SVG, PNG, JPG or GIF (MAX. 800x400px)
+    </p>
+  </div>
+  <input
+    formControlName="fileBackgroud"
+    id="fileBackgroud"
+    type="file"
+    class="form-control hidden"
+    (change)="onFileChange($event,'fileBackgroud')"
+    (click)="$any($event.target).value= null"
+  />
+</label>
+
+                    <div class="relative w-48 h-64" *ngIf="imageBackground">
+                        <img [src]="imageBackground" class="w-48 h-64 rounded-2xl" />
+                        <div class="absolute top-0 right-0 cursor-pointer" (click)="removeImage()">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20">
+      <path
+        fill-rule="evenodd"
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+      />
+    </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block  w-1/3 mt-10 ml-10 h-64 bg-gray-50 rounded-lg border-2 border-gray-300     ">
+                    <div class="font-bold p-2 ">Background Image</div>
+                    <div class="text-sm pl-2 text-gray-300">The Cover must be include the book title</div>
+                    <img src="assets/img/cover_hint.png" alt="" class="w-3/5 h-44">
+                </div>
+            </div>
+        </div>
+
+
         <!-- <button class="" [disabled]="myForm.invalid" type="submit">Submit</button> -->
         <button type="submit" class="  shadow bg-orange-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white text-sm py-1 px-5 rounded-full">
-Save
-</button>
+                Save
+      </button>
     </form>
 </div>
