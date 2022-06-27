@@ -22,6 +22,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { StepsComponent } from './steps/steps.component';
 import { UploadCoverComponent } from './publish/upload-cover/upload-cover.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UploadChapterComponent } from './publish/upload-chapter/upload-chapter.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     ComicsComponent,
     NovelsComponent,
     StepsComponent,
-    UploadCoverComponent
+    UploadCoverComponent,
+    UploadChapterComponent
   ],
   imports: [
     BrowserModule,
