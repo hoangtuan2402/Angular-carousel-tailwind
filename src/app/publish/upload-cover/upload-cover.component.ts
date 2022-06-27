@@ -11,9 +11,8 @@ export class UploadCoverComponent implements OnInit {
   imageSrc: string = '';
 
   myForm = new FormGroup({
-    coverWithTitle: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    file: new FormControl('', [Validators.required]),
-    fileSource: new FormControl('', [Validators.required]),
+    fileCoverWithTitle: new FormControl('', [Validators.required]),
+    fileCoverSource: new FormControl('', [Validators.required]),
   });
   constructor(private http: HttpClient) {}
 
@@ -31,11 +30,11 @@ export class UploadCoverComponent implements OnInit {
       reader.readAsDataURL(file);
 
       reader.onload = () => {
-        
+
         this.imageSrc = reader.result as string;
 
         this.myForm.patchValue({
-          fileSource: reader.result,
+          fileCoverSource: reader.result,
         });
       };
     }
@@ -43,6 +42,8 @@ export class UploadCoverComponent implements OnInit {
 
   submit() {
     console.log("Submit Form");
+    console.log(this.myForm.value);
+
   }
   removeImage(){
     this.imageSrc ="";
