@@ -27,7 +27,7 @@
                         <p class="text-red-600 mx-2">*</p>
                         Comic tags
                     </div>
-                    <ng-select [items]="tags" bindLabel="name" placeholder="Select Tags" [multiple]="true" [(ngModel)]="selectedTags" name="tags" class="text-sm block w-11/12 lg:w-1/2 ml-4 p-2.5 lg:ml-64">
+                    <ng-select (change)="changeSelected(selectedTags)" [items]="tags" bindLabel="name" placeholder="Select Tags" [multiple]="true" [(ngModel)]="selectedTags" name="tags" class="text-sm block w-11/12 lg:w-1/2 ml-4 p-2.5 lg:ml-64">
                     </ng-select>
 
                     <div class="flex text-xl mt-5 lg:ml-64 dark:text-white">
