@@ -21,12 +21,20 @@ export class ComicsComponent implements OnInit {
   ];
   selected = [{ id: 3, name: 'Volkswagen Ford' }];
   selectedTags = [{ id: 1, name: 'Manhua' }];
+  ratting = [{ id: 1,name:'ABC' }, { id: 2,name:'DEF' }];
+  radioSelected ={};
 
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor() { }
+
+  ngOnInit(): void { }
 
   changeSelected(val: any) {
     console.log(val);
+  }
+
+  onItemChange(item:any){
+      console.log(item);
+
   }
 }

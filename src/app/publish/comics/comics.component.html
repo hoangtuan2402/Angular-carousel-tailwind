@@ -43,82 +43,52 @@
                         Ratting
                     </div>
                     <div class="lg:ml-64 ">
-                        <div class="form-check text-xl flex mt-4">
-                            <div class="flex items-center h-5">
-                                <input class="form-check-input appearance-none rounded-full h-5 w-5 mx-5 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200  align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                                    type="radio" name="flexRadioDefault" id="flexRadioDefault1" aria-describedby="flexRadioDefault1-text" />
-                            </div>
-                            <div class="ml-2 text-xl lg:-mt-3">
-                                <label for="flexRadioDefault1" class="font-medium text-gray-900 dark:text-gray-300 ">Free shipping via Flowbite</label>
-                                <p id="flexRadioDefault1-text" class="text-sm font-normal text-gray-500 dark:text-gray-300">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus lacinia, posuere nibh a, pellentesque leo. In condimentum erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus lacinia, posuere nibh a, pellentesque
-                                    leo. In condimentum erat.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="form-check text-xl flex mt-4">
-                            <div class="flex items-center h-5">
-                                <input class="form-check-input appearance-none rounded-full h-5 w-5 mx-5 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                                    type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
-                            </div>
-                            <div class="ml-2 text-xl lg:-mt-3">
-                                <label for="flexRadioDefault2" class="font-medium text-gray-900 dark:text-gray-300">Free shipping via Flowbite</label
-                >
-                <p
-                  id="flexRadioDefault2-text"
-                  class="text-sm font-normal text-gray-500 dark:text-gray-300"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer sed risus lacinia, posuere nibh a, pellentesque leo.
-                  In condimentum erat. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Integer sed risus lacinia, posuere nibh a,
-                  pellentesque leo. In condimentum erat.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                        <ul>
+                            <li *ngFor="let item of ratting">
+                                <div class="form-check text-xl flex mt-4">
+                                    <div class="flex items-center h-5">
+                                        <input class="form-check-input appearance-none rounded-full h-5 w-5 mx-5 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200  align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                            [(ngModel)]="radioSelected" value="{{item.name}}" (change)="onItemChange(item)" type="radio" name="flexRadioDefault" id="flexRadioDefault1" aria-describedby="flexRadioDefault1-text" />
+                                    </div>
+                                    <div class="ml-2 text-xl lg:-mt-3">
+                                        <label for="flexRadioDefault1" class="font-medium text-gray-900 dark:text-gray-300 ">{{item.id}}</label>
+                                        <p id="flexRadioDefault1-text" class="text-sm font-normal text-gray-500 dark:text-gray-300">
+                                            {{item.name}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
 
-      <!-- begin Quote -->
-      <div class="hidden lg:flex lg:w-1/4 mt-4 lg:p-5">
-        <div
-          class="max-w-4xl p-4 text-gray-800 bg-white rounded-lg shadow relative lg:h-1/4"
-        >
-          <div class="mb-2">
-            <div class="h-3 text-3xl text-left text-gray-600">“</div>
-            <p class="px-4 text-sm text-center text-gray-600">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
-              obcaecati laudantium recusandae, debitis eum voluptatem ad, illo
-              voluptatibus temporibus odio provident.
-            </p>
-            <div class="h-3 text-3xl text-right text-gray-600">”</div>
-          </div>
-          <img
-            src="assets/img/tips.png"
-            alt="tips"
-            class="absolute -top-10 right-0"
-          />
+                    </div>
+                </div>
+            </div>
+
+            <!-- begin Quote -->
+            <div class="hidden lg:flex lg:w-1/4 mt-4 lg:p-5">
+                <div class="max-w-4xl p-4 text-gray-800 bg-white rounded-lg shadow relative lg:h-1/4">
+                    <div class="mb-2">
+                        <div class="h-3 text-3xl text-left text-gray-600">“</div>
+                        <p class="px-4 text-sm text-center text-gray-600">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecati laudantium recusandae, debitis eum voluptatem ad, illo voluptatibus temporibus odio provident.
+                        </p>
+                        <div class="h-3 text-3xl text-right text-gray-600">”</div>
+                    </div>
+                    <img src="assets/img/tips.png" alt="tips" class="absolute -top-10 right-0" />
+                </div>
+            </div>
+            <!-- end Quote -->
         </div>
-      </div>
-      <!-- end Quote -->
-    </div>
-    <div class="flex items-center justify-center mx-3 py-3">
-      <div class="lg:w-2/3"></div>
-      <div class="lg:w-1/3">
-        <button
-          class="shadow bg-slate-400 hover:bg-slate-800 focus:shadow-outline focus:outline-none text-white text-sm py-1 px-5 rounded-full"
-          type="button"
-        >
+        <div class="flex items-center justify-center mx-3 py-3">
+            <div class="lg:w-2/3"></div>
+            <div class="lg:w-1/3">
+                <button class="shadow bg-slate-400 hover:bg-slate-800 focus:shadow-outline focus:outline-none text-white text-sm py-1 px-5 rounded-full" type="button">
           Cancel
         </button>
-        <button
-          class="mx-4 shadow bg-orange-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white text-sm py-1 px-5 rounded-full"
-          type="button"
-        >
+                <button class="mx-4 shadow bg-orange-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white text-sm py-1 px-5 rounded-full" type="button">
           Next
         </button>
-      </div>
-    </div>
-  </form>
+            </div>
+        </div>
+    </form>
 </div>
