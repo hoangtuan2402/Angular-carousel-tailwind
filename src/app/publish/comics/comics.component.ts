@@ -50,6 +50,7 @@ export class ComicsComponent implements OnInit {
   }
 
   saveRegisterComic(){
+    console.log(this.registerComicsForm.value);
     
   }
 }
