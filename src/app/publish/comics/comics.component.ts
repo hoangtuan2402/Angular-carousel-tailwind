@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-comics',
@@ -25,6 +26,16 @@ export class ComicsComponent implements OnInit {
   radioSelected ={};
 
 
+  registerComicsForm = new FormGroup({
+    comicName: new FormControl(),
+    author: new FormControl(),
+    category: new FormControl(),
+    tags: new FormControl(),
+    introduction: new FormControl(),
+    ratting: new FormControl(),
+  });
+
+
   constructor() { }
 
   ngOnInit(): void { }
@@ -36,5 +47,9 @@ export class ComicsComponent implements OnInit {
   onItemChange(item:any){
       console.log(item);
 
+  }
+
+  saveRegisterComic(){
+    
   }
 }
