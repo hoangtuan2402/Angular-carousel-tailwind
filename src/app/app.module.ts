@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +23,9 @@ import { StepsComponent } from './steps/steps.component';
 import { UploadCoverComponent } from './publish/upload-cover/upload-cover.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadChapterComponent } from './publish/upload-chapter/upload-chapter.component';
-
+import {DragDropModule} from '@angular/cdk/drag-drop'
+import { UserService } from './publish/user.service';
+import { DrapDropChapterComponent } from './publish/drap-drop-chapter/drap-drop-chapter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { UploadChapterComponent } from './publish/upload-chapter/upload-chapter.
     NovelsComponent,
     StepsComponent,
     UploadCoverComponent,
-    UploadChapterComponent
+    UploadChapterComponent,
+    DrapDropChapterComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +54,11 @@ import { UploadChapterComponent } from './publish/upload-chapter/upload-chapter.
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    DragDropModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UserService],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

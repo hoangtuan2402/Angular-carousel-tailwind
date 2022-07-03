@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <mat-tab-group>
+        <mat-tab label="Reordering lists">
+            <div cdkDropList class="movie-list" (cdkDropListDropped)="drop($event)">
+                <div class="movie-block" *ngFor="let user of users" cdkDrag>{{user.name.first}}</div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+    <button (click)="submitList()">Submit</button>
+</div>
