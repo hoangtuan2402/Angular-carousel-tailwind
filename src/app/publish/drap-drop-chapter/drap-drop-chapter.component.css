@@ -1,40 +1,38 @@
-.wrapper {
-    margin: 25px auto;
-    max-width: 600px;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.container {
-    width: 45%;
-    margin: 0 25px 25px 0;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.movie-list {
-    width: 80%;
-    border: solid 1px #ccc;
-    min-height: 60px;
-    display: inline-block;
-    background: white;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-top: 25px;
-}
-
-.movie-block {
-    padding: 20px 10px;
-    border-bottom: solid 1px #ccc;
-    color: rgba(0, 0, 0, 0.87);
+.content {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    box-sizing: border-box;
-    cursor: move;
-    background: white;
-    font-size: 14px;
+    position: relative;
+}
+
+.board {
+    flex-basis: 80%;
+    position: relative;
+}
+
+.side {
+    flex-basis: 16%;
+    /*it's flex-basis of board/5 */
+}
+
+.cell {
+    width: 10%;
+    height: 10%;
+}
+
+.side .cell {
+    width: calc(100% - 1px);
+    /*we calcule 100% -the "gap" of the mat-grid-list*/
+    height: calc(100% - 1px)
+}
+
+
+/*This makes a little animation when drop, for this it's necesary the img float:left:margin-right:-100%
+  else, when dropped the img dropped goes below the img in cell*/
+
+.cell img {
+    float: left;
+    width: 100%;
+    margin-right: -100%;
 }
 
 .cdk-drag-preview {
