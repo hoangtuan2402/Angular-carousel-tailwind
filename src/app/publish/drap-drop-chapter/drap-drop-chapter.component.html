@@ -1,28 +1,23 @@
-<div class="content" cdkDropListGroup>
-    <div #board class="board">
-        <mat-grid-list cols="5" gutterSize="
-      1">
-            <mat-grid-tile *ngFor="let cell of cells; let i = index">
-                <div class="cell" cdkDropList [cdkDropListData]="cell" (cdkDropListDropped)="drop($event)" [style.background]="i == indexOver ? 'red' : 'yellowgreen'" (mouseover)="this.indexOver = i" (mouseout)="indexOver = -1">
-                    <div cdkDrag>
-                        <img *ngIf="cell.src" [src]="cell.src" width="100%" />
-                        <span *ngIf="!cell.src"></span>
-                        <div *cdkDragPlaceholder></div>
-                    </div>
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+<!-- <div class="bg-amber-300" cdkDropListGroup>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8" cdkDropList [cdkDropListData]="user" *ngFor="let user of users" (cdkDropListDropped)="drop($any($event))">
+        <div class="p-4 mt-3 bg-cyan-400 rounded-md flex items-center justify-center" cdkDrag>
+            <p>{{user.name.first}}</p>
+        </div>
     </div>
-    <div class="side">
-        <mat-grid-list cols="1" gutterSize="0">
-            <mat-grid-tile *ngFor="let cell of icons; let i = index">
-                <div class="cell" cdkDropList [cdkDropListData]="cell" (cdkDropListDropped)="drop($event)">
+
+</div> -->
+
+<div cdkDropListGroup>
+    <div #board class="board">
+        <div class="grid-container">
+            <div *ngFor="let user of users; let i = index">
+                <div class="grid-item" cdkDropList [cdkDropListData]="user" (cdkDropListDropped)="drop($event)" [style.background]="i == indexOver ? 'red' : 'yellowgreen'">
                     <div cdkDrag>
-                        <img [src]="cell" width="100%" />
+                        {{user.name.first}}
                         <div *cdkDragPlaceholder></div>
                     </div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
     </div>
 </div>
