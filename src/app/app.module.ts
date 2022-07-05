@@ -26,6 +26,7 @@ import { UploadChapterComponent } from './publish/upload-chapter/upload-chapter.
 import {DragDropModule} from '@angular/cdk/drag-drop'
 import { UserService } from './publish/user.service';
 import { DrapDropChapterComponent } from './publish/drap-drop-chapter/drap-drop-chapter.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { DrapDropChapterComponent } from './publish/drap-drop-chapter/drap-drop-
     ReactiveFormsModule,
     NgSelectModule,
     HttpClientModule,
-    DragDropModule
+    DragDropModule,
+    NgxPaginationModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent],
