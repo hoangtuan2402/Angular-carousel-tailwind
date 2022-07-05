@@ -5,7 +5,7 @@
 </div>
 
 <pagination-template #p="paginationApi" [id]="config.id!" (pageChange)="config.currentPage = $event">
-    <div class="flex max-w-screen-xl  px-4 py-8 mx-auto sm:px-6 lg:px-8 justify-center">
+    <div class="flex max-w-screen-xl  px-4 py-8 mx-auto sm:px-6 lg:px-8 justify-center items-center ">
         <a (click)="p.previous()" class="px-4 py-2 mx-1  text-gray-500 capitalize bg-white rounded-md cursor-pointer dark:bg-gray-900 dark:text-gray-600 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200">
             <div class="flex items-center -mx-1">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -21,12 +21,12 @@
             </div>
         </a>
 
-        <div *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
-            <a class="hidden px-4 py-2 mx-1 text-gray-700 transition-colors duration-200 transform bg-white rounded-md sm:inline dark:bg-gray-900 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200" (click)="p.setCurrent(page.value)"
+        <div class="justify-center items-center flex" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
+            <a class="hidden px-4 py-4 mx-1 text-gray-700 transition-colors duration-200 transform bg-white rounded-md sm:inline dark:bg-gray-900 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200" (click)="p.setCurrent(page.value)"
                 *ngIf="p.getCurrent() !== page.value">
                 <span>{{ page.label }}</span>
             </a>
-            <div class="hidden px-4 py-2 mx-1 text-gray-700 transition-colors duration-200 transform bg-white rounded-md sm:inline dark:bg-gray-900 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200" *ngIf="p.getCurrent() === page.value">
+            <div class="hidden px-4 py-4  mx-1 text-gray-700 transition-colors duration-200 transform bg-white rounded-md sm:inline dark:bg-gray-900 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200" *ngIf="p.getCurrent() === page.value">
                 <span>{{ page.label }}</span>
             </div>
         </div>
